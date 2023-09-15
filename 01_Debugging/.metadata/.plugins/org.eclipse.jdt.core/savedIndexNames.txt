@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/home/masnm/codes/Dev_Test/01_Debugging/.metadata/.plugins/org.eclipse.jdt.core
+664475153.index
+3521627152.index
+1865797976.index

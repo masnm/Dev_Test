@@ -1,0 +1,7 @@
+Tasks to do:
+	[X] Breakpoint
+	[X] break properties
+	[] watch variable ( NW )
+	[X] runtime change
+	[X] assert breaking
+	[X] stack trace
