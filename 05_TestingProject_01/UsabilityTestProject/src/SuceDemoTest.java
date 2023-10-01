@@ -1,4 +1,5 @@
 import java.time.Duration;
+import java.util.List;
 import java.util.Locale;
 
 import org.junit.After;
@@ -32,7 +33,7 @@ public class SuceDemoTest {
 		String location = "";
 		if ( OS.equals( "linux" ) ) {
 			location = "/usr/bin/chromedriver";
-		} else if ( OS.equals( "windows 11") || OS.equals( "windos 10" ) ) {
+		} else if ( OS.equals( "windows 11") || OS.equals( "windows 10" ) ) {
 			location = "./chromeDriver/chromedriver.exe";
 		} else {
 			System.out.println ( "Unknown OS. Test Can't run." );
@@ -231,4 +232,160 @@ public class SuceDemoTest {
 		Assert.assertEquals ( "https://www.saucedemo.com/", url );
 	}
 
+	@Test
+	public void addToCartTestStandard () {
+		// using the standard user for this test
+		loginStandard ();
+		
+		// finding all the add to cart buttons on the webpage
+		List<WebElement> elems = driver.findElements ( By.xpath("//button[text()='Add to cart']") );
+		
+		// clicking the first two add to cart buttons
+		elems.get(0).click();
+		elems.get(1).click();
+		
+		// changin the webpage to cart page
+		clickButtonById ( "shopping_cart_container" );
+		
+		// clicking the checkout button
+		clickButtonById ( "checkout" );
+		
+		// filling the from with information for the order
+		setKeyById ( "first-name", "Aayan" );
+		setKeyById ( "last-name", "Khan" );
+		setKeyById ( "postal-code", "1234" );
+		
+		// sending the information by clicking the continue button
+		clickButtonById ( "continue" );
+		
+		// after reading the order receipt, pressing the finish button
+		clickButtonById ( "finish" );
+		
+		// trying the find the complete-header to verify if the order was sussessfull
+		WebElement elem = driver.findElement(By.className( "complete-header" ) );
+		
+		// getting the message from the web element
+		String s = elem.getText();
+		
+		// verifying the string message
+		Assert.assertEquals ( "Thank you for your order!", s );
+	}
+	
+	@Test
+	public void addToCartTestLocked () {
+		// using the Locked user for this test
+		loginLocked ();
+		
+		// finding all the add to cart buttons on the webpage
+		List<WebElement> elems = driver.findElements ( By.xpath("//button[text()='Add to cart']") );
+		
+		// clicking the first two add to cart buttons
+		elems.get(0).click();
+		elems.get(1).click();
+		
+		// changin the webpage to cart page
+		clickButtonById ( "shopping_cart_container" );
+		
+		// clicking the checkout button
+		clickButtonById ( "checkout" );
+		
+		// filling the from with information for the order
+		setKeyById ( "first-name", "Aayan" );
+		setKeyById ( "last-name", "Khan" );
+		setKeyById ( "postal-code", "1234" );
+		
+		// sending the information by clicking the continue button
+		clickButtonById ( "continue" );
+		
+		// after reading the order receipt, pressing the finish button
+		clickButtonById ( "finish" );
+		
+		// trying the find the complete-header to verify if the order was sussessfull
+		WebElement elem = driver.findElement(By.className( "complete-header" ) );
+		
+		// getting the message from the web element
+		String s = elem.getText();
+		
+		// verifying the string message
+		Assert.assertEquals ( "Thank you for your order!", s );
+	}
+	
+	@Test	
+	public void addToCartTestProblem () {
+		// using the standard user for this test
+		loginProblem ();
+		
+		// finding all the add to cart buttons on the webpage
+		List<WebElement> elems = driver.findElements ( By.xpath("//button[text()='Add to cart']") );
+		
+		// clicking the first two add to cart buttons
+		elems.get(0).click();
+		elems.get(1).click();
+		
+		// changin the webpage to cart page
+		clickButtonById ( "shopping_cart_container" );
+		
+		// clicking the checkout button
+		clickButtonById ( "checkout" );
+		
+		// filling the from with information for the order
+		setKeyById ( "first-name", "Aayan" );
+		setKeyById ( "last-name", "Khan" );
+		setKeyById ( "postal-code", "1234" );
+		
+		// sending the information by clicking the continue button
+		clickButtonById ( "continue" );
+		
+		// after reading the order receipt, pressing the finish button
+		clickButtonById ( "finish" );
+		
+		// trying the find the complete-header to verify if the order was sussessfull
+		WebElement elem = driver.findElement(By.className( "complete-header" ) );
+		
+		// getting the message from the web element
+		String s = elem.getText();
+		
+		// verifying the string message
+		Assert.assertEquals ( "Thank you for your order!", s );
+	}
+		
+	@Test
+	public void addToCartTestGlitch () {
+		// using the standard user for this test
+		loginGlitch ();
+		
+		// finding all the add to cart buttons on the webpage
+		List<WebElement> elems = driver.findElements ( By.xpath("//button[text()='Add to cart']") );
+		
+		// clicking the first two add to cart buttons
+		elems.get(0).click();
+		elems.get(1).click();
+		
+		// changin the webpage to cart page
+		clickButtonById ( "shopping_cart_container" );
+		
+		// clicking the checkout button
+		clickButtonById ( "checkout" );
+		
+		// filling the from with information for the order
+		setKeyById ( "first-name", "Aayan" );
+		setKeyById ( "last-name", "Khan" );
+		setKeyById ( "postal-code", "1234" );
+		
+		// sending the information by clicking the continue button
+		clickButtonById ( "continue" );
+		
+		// after reading the order receipt, pressing the finish button
+		clickButtonById ( "finish" );
+		
+		// trying the find the complete-header to verify if the order was sussessfull
+		WebElement elem = driver.findElement(By.className( "complete-header" ) );
+		
+		// getting the message from the web element
+		String s = elem.getText();
+		
+		// verifying the string message
+		Assert.assertEquals ( "Thank you for your order!", s );
+	}
+		
 }
