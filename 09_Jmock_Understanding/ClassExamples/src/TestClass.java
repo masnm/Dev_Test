@@ -15,7 +15,7 @@ public class TestClass {
 	}
 	
 	@Test
-	void TestCase() throws Exception{
+	void TestCase() {
 		
 		//create the mock object
 		final ICalculator calculator = mock.mock(ICalculator.class);
@@ -24,7 +24,8 @@ public class TestClass {
 		//function calls/return values
 		mock.checking(new Expectations(){{
             oneOf(calculator).Add(0, 1);
-            will(returnValue(1));  
+            will(returnValue(1));
+            // oneOf(calculator).Add(12,12);
 		}});
 		
 		//we can now use the mock object just

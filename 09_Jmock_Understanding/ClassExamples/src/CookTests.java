@@ -1,9 +1,7 @@
-import static org.junit.Assert.*;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-
-import org.jmock.Mockery;
 import org.jmock.Expectations;
+import org.jmock.Mockery;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class CookTests {
 
@@ -12,7 +10,7 @@ public class CookTests {
 	
 	@BeforeEach
 	void Setup() {
-		cook = new Cook();//real object being tested 
+		cook = new Cook();  // real object being tested
 		mockContext = new Mockery();
 	}
 	
@@ -34,6 +32,16 @@ public class CookTests {
 		mockContext.checking(new Expectations() {{
 			oneOf(waiter).SetOrder(expectedOrder);
 		}});
+		
+		/*
+		String ordered = waiter.GetOrder();
+		
+		cook.SetOrder(ordered);
+		
+		String dish = cook.GetOrder();
+		
+		waiter.SetOrder(dish);
+		*/
 		
 		//lets place the order and make sure we 
 		//get the correct item
