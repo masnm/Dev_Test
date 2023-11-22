@@ -1,0 +1,14 @@
+.
+└── TddProject
+    ├── bin
+    │   ├── FileReaderTemplate.class
+    │   ├── Sigmoid.class
+    │   ├── TestFunctions.class
+    │   └── ThreeDEuclideanDistance.class
+    ├── src
+    │   ├── FileReaderTemplate.java
+    │   ├── Sigmoid.java
+    │   ├── TestFunctions.java
+    │   └── ThreeDEuclideanDistance.java
+    └── text.txt
+
