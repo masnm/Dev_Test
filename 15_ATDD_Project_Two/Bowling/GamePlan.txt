@@ -1,0 +1,24 @@
+main () ->
+    game object create
+    call game.start ()
+    
+game () ->
+    random_roll_interface random_gen
+    List < frames > total [10]
+
+    start () ->
+        while ( true ) ->
+            take input
+            do random roll
+            show the score
+            update states
+
+    show_the_score() ->
+        formatted string to print the result or
+        each frame on a seperate line
+        
+    random_gen.random_roll () ->
+        returns some random number on range of available pins
+        
+random_roll_interface () ->
+    random_roll ( max possible );

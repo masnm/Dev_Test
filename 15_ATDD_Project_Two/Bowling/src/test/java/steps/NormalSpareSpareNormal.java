@@ -1,0 +1,82 @@
+package steps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class NormalSpareSpareNormal {
+
+	@Given("first frame first roll gives {string} points")
+	public void first_frame_first_roll_gives_points(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Given("frist frame second roll gives {string} points")
+	public void frist_frame_second_roll_gives_points(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("i get second frame first roll {string} pins")
+	public void i_get_second_frame_first_roll_pins(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("i get second frame second roll {string} pins")
+	public void i_get_second_frame_second_roll_pins(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("which makes this frame as an spare")
+	public void which_makes_this_frame_as_an_spare() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("i get third frame first roll {string} pins")
+	public void i_get_third_frame_first_roll_pins(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("i get third frame second roll {string} pins")
+	public void i_get_third_frame_second_roll_pins(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("which makes this frame as spare again")
+	public void which_makes_this_frame_as_spare_again() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("fourth frame first roll i got {string} points")
+	public void fourth_frame_first_roll_i_got_points(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@When("fourth frame second roll i got {string} points")
+	public void fourth_frame_second_roll_i_got_points(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Then("first frame i got total of {string} points")
+	public void first_frame_i_got_total_of_points(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Then("second frame i got total of {string} points")
+	public void second_frame_i_got_total_of_points(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Then("third frame i got total of {string} points")
+	public void third_frame_i_got_total_of_points(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Then("fourth frame i got total of {string} points")
+	public void fourth_frame_i_got_total_of_points(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+}
