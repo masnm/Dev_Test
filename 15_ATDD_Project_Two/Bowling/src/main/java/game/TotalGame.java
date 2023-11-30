@@ -16,6 +16,18 @@ class TotalGame {
 		this.gameOver = false;
 	}
 	
+	public int getPreviousFrameTotalPoint () {
+		if ( presentFrame == 0 )
+			throw new IllegalArgumentException ( "No previous frame exist" );
+		return getFrameTotalPoint ( presentFrame - 1 );
+	}
+	
+	public boolean getPreviousFrameInfo ( String info ) {
+		if ( presentFrame == 0 )
+			throw new IllegalArgumentException ( "No previous frame exist" );
+		return getFrameInfo ( presentFrame - 1, info );
+	}
+	
 	private int getThisFrameRemainingPin () {
 		if ( this.presentRoll == 0 ) return 10;
 		else if ( this.presentRoll == 1 )
@@ -46,8 +58,9 @@ class TotalGame {
 		}
 		if ( presentFrame > 1 && presentRoll == 0 ) {
 			if ( frames[presentFrame - 1].getFrameInfo("Strike")
-					|| frames[presentFrame - 2].getFrameInfo("Strike") ) {
+					&& frames[presentFrame - 2].getFrameInfo("Strike") ) {
 				frames[presentFrame - 2].updateScore(knocked);
+				frames[presentFrame - 1].updateScore(knocked);
 				frames[presentFrame].updateScore(knocked);
 			}
 		}
@@ -126,6 +139,9 @@ class TotalGame {
 			return frames[presentFrame].getSecondRoll();
 		}
 		if ( presentRoll == 0 ) {
+			if ( presentFrame == 0 ) {
+				throw new IllegalArgumentException ( "Can't find the previous roll result!" );
+			}
 			if ( frames[presentFrame - 1].getFrameInfo("Strike") )
 				return frames[presentFrame - 1].getFirstRoll();
 			else

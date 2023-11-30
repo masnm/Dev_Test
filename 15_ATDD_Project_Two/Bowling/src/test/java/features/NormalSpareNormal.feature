@@ -16,7 +16,7 @@ Feature: Normal Spare Normal
 
     Examples: 
         | FF_FR_PT | FF_SR_PT | SF_FR_PNS | SF_SR_PNS | TF_FR_PT | TF_SR_PT | FF_T_POINTS | SF_T_POINTS | TF_T_POINTS |
-        |        2 |        4 |         2 |         8 |        8 |        1 |           6 |          18 |           9 |
-        |        4 |        1 |         1 |         9 |        0 |        5 |           5 |          10 |           5 |
-        |        6 |        0 |         6 |         4 |        6 |        2 |           6 |          16 |           8 |
-        |        7 |        2 |         0 |        10 |        9 |        0 |           9 |          19 |           9 |
+        |        2 |        4 |         2 |         8 |        8 |        1 |           6 |          24 |          33 |
+        |        4 |        1 |         1 |         9 |        0 |        5 |           5 |          15 |          20 |
+        |        6 |        0 |         6 |         4 |        6 |        2 |           6 |          22 |          30 |
+        |        7 |        2 |         0 |        10 |        9 |        0 |           9 |          28 |          37 |

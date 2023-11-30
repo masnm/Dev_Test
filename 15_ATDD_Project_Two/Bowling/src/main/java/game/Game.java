@@ -22,8 +22,16 @@ public class Game {
 		return totalGame.getFrameInfo ( frameNumber - 1, infoFlag );
 	}
 	
+	public boolean getPreviousFrameInfo ( String infoFlag ) {
+		return totalGame.getPreviousFrameInfo ( infoFlag );
+	}
+	
 	public int getFrameTotalPoint ( int frameNumber ) {
 		return totalGame.getFrameTotalPoint ( frameNumber - 1 );
+	}
+	
+	public int getPreviousFrameTotalPoint () {
+		return totalGame.getPreviousFrameTotalPoint ();
 	}
 
 }

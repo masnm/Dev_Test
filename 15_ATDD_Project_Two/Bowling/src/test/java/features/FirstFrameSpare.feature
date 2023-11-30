@@ -11,9 +11,9 @@ Feature: Frist frame got an spare and second frame is normal
       And second frame got a total of "<SR_F_POINTS>" points
 
 	    Examples: 
-	        | FF_FR | FF_SR | SF_FR | SF_SR | FF_F_POINTS | SF_F_POINTS |
-	        |     5 |     5 |     4 |     2 |          16 |          22 |
-	        |     3 |     7 |     2 |     7 |          19 |          28 |
-	        |     2 |     8 |     6 |     1 |          17 |          24 |
-	        |     1 |     9 |     0 |     2 |          12 |          14 |
-	        |     4 |     6 |     2 |     3 |          15 |          20 |
+	        | FF_FR | FF_SR | SF_FR | SF_SR | FF_F_POINTS | SR_F_POINTS |
+	        |     5 |     5 |     4 |     2 |          14 |          20 |
+	        |     3 |     7 |     2 |     7 |          12 |          21 |
+	        |     2 |     8 |     6 |     1 |          16 |          23 |
+	        |     1 |     9 |     0 |     2 |          10 |          12 |
+	        |     4 |     6 |     2 |     3 |          12 |          17 |
