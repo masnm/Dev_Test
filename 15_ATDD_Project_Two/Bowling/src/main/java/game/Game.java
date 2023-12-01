@@ -33,5 +33,13 @@ public class Game {
 	public int getPreviousFrameTotalPoint () {
 		return totalGame.getPreviousFrameTotalPoint ();
 	}
+	
+	public boolean isGameOver () {
+		return totalGame.gameOver;
+	}
+	
+	public void showCurrentScore () {
+		totalGame.showCurrentScore ();
+	}
 
 }

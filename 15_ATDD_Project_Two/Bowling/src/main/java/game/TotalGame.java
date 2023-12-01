@@ -16,6 +16,18 @@ class TotalGame {
 		this.gameOver = false;
 	}
 	
+	public void showCurrentScore () {
+		for ( Frame frame : frames ) {
+			System.out.println ( "Frame : " + frame.getFrameNo() );
+			if ( frame.getFrameNo() == 10 ) {
+				System.out.printf ( "%4s%s%4s%s%4s\n", frame.getFirstRoll()," | ", frame.getSecondRoll(), " | ", frame.getThirdRoll() );
+			} else {
+				System.out.printf ( "%4s%s%4s\n", frame.getFirstRoll()," | ", frame.getSecondRoll() );
+			}
+			System.out.printf ( "Frame Total : %s\n\n", frame.getFinalScore() );
+		}
+	}
+	
 	public int getPreviousFrameTotalPoint () {
 		if ( presentFrame == 0 )
 			throw new IllegalArgumentException ( "No previous frame exist" );

@@ -14,6 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 			  	"src/test/java/features/NormalSpareSpareNormal.feature",
 			  	"src/test/java/features/NormalStrikeNormal.feature",
 			  	"src/test/java/features/NormalStrikeStrikeNormal.feature",
+			  	"src/test/java/features/FullGamePlayMayExcept.feature",
 				},
 		glue = { "steps" }
 		)

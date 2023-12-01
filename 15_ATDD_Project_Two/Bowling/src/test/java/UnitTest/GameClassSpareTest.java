@@ -44,7 +44,10 @@ public class GameClassSpareTest {
 			will(returnValue(4));
 		}});
 		
-		// performing the first roll
+		// performing first frame with the mocked object
+		// first frame first roll get 8 points
+		// first frame second roll get 2 points
+		// which makes that an spare
 		game.performNextRoll ();
 		int firstRollValue = game.getPreviousRollResult ();
 		assertTrue ( firstRollValue == 8 );
@@ -53,9 +56,12 @@ public class GameClassSpareTest {
 		int secondRollValue = game.getPreviousRollResult ();
 		assertTrue ( secondRollValue == 2 );
 		
+		// making sure the game registered the frame as an spare
 		assertFalse ( game.getFrameInfo ( 1, "Strike" ) );
 		assertTrue ( game.getFrameInfo ( 1, "Spare" ) );
 		
+		// next frame is going as a normal frame so that the score calculation
+		// can me tested as well
 		game.performNextRoll ();
 		int thirdRollValue = game.getPreviousRollResult ();
 		assertTrue ( thirdRollValue == 3 );
@@ -64,7 +70,7 @@ public class GameClassSpareTest {
 		int fourthRollValue = game.getPreviousRollResult ();
 		assertTrue ( fourthRollValue == 4 );
 
-		// making sure the score are calcuated properly
+		// making sure the score are calculated properly
 		assertTrue ( game.getFrameTotalPoint ( 1 ) == 13 );
 		assertTrue ( game.getFrameTotalPoint ( 2 ) == 20 );
 		

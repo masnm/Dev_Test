@@ -40,14 +40,17 @@ public class GameClassStrikeTest {
 			will(returnValue(4));
 		}});
 		
-		// performing the first roll
+		// we are doing an strike in the first frame
 		game.performNextRoll ();
 		int firstRollValue = game.getPreviousRollResult ();
 		assertTrue ( firstRollValue == 10 );
 		
+		// making sure the game object marks the previous frame as an strike
+		// also making sure the previous frame is not an spare
 		assertTrue ( game.getFrameInfo ( 1, "Strike" ) );
 		assertFalse ( game.getFrameInfo ( 1, "Spare" ) );
 		
+		// doing an normal frame as the second frame
 		game.performNextRoll ();
 		int secondRollValue = game.getPreviousRollResult ();
 		assertTrue ( secondRollValue == 3 );
@@ -56,7 +59,7 @@ public class GameClassStrikeTest {
 		int thirdRollValue = game.getPreviousRollResult ();
 		assertTrue ( thirdRollValue == 4 );
 		
-		// making sure the score are calcuated properly
+		// making sure the score are calculate properly
 		assertTrue ( game.getFrameTotalPoint ( 1 ) == 17 );
 		assertTrue ( game.getFrameTotalPoint ( 2 ) == 24 );
 		
